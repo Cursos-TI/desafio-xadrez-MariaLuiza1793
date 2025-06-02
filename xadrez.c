@@ -28,5 +28,25 @@ int main() {
         j++;
     } while (j < movimentoRainha);
 
+    // Movimento do Cavalo: 2 casas para baixo e 1 para a esquerda
+    printf("\nMovimento do Cavalo:\n");
+
+    const int casasBaixo = 2;
+    const int casasEsquerda = 1;
+
+    // Loop externo com 'for' para movimento para baixo
+    for (int k = 0; k < casasBaixo; k++) {
+        printf("Baixo\n");
+
+        // Loop interno com 'while' para movimento para a esquerda (executa só na última iteração)
+        if (k == casasBaixo - 1) {
+            int l = 0;
+            while (l < casasEsquerda) {
+                printf("Esquerda\n");
+                l++;
+            }
+        }
+    }
+
     return 0;
 }
